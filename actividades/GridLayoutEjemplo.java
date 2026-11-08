@@ -1,5 +1,3 @@
-package actividad;
-
 import javax.swing.*;
 import java.awt.GridLayout;
 
