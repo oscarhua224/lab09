@@ -34,6 +34,7 @@ public class CompraPasajes {
                 "Tacna",
                 "Moquegua"
         };
+        //COMBO BOX, lista de ciudades
         comboOrigen.setModel(
                 new DefaultComboBoxModel<>(ciudades)
         );
@@ -53,13 +54,13 @@ public class CompraPasajes {
         listaServicio.setListData(
                 new String[]{"Economico", "Estandar", "VIP"}
         );
-
+        //servicio: estandar, economico, etc
         listaServicio.setSelectionMode(
                 ListSelectionModel.SINGLE_SELECTION
         );
         listaServicio.setSelectedIndex(0);
 
-
+        //botones
         botonResumen.addActionListener(e -> {
             mostrarResumen();
         });
@@ -74,7 +75,7 @@ public class CompraPasajes {
         String nombre = campoNombre.getText().trim();
         String dni = campoDni.getText().trim();
         String fecha = campoFecha.getText().trim();
-
+        //validar campos si estn vacios o no
         if (nombre.isEmpty() || dni.isEmpty() || fecha.isEmpty()) {
             JOptionPane.showMessageDialog(
                     panelPrincipal, "Complete todos los campos",
@@ -93,7 +94,7 @@ public class CompraPasajes {
             );
             return;
         }
-
+        //validacion de fecha, si es que cumple formato, fecha actual
         DateTimeFormatter formato = DateTimeFormatter
                 .ofPattern("dd/MM/uuuu")
                 .withResolverStyle(ResolverStyle.STRICT);
@@ -198,7 +199,7 @@ public class CompraPasajes {
         checkManta.setSelected(false);
         checkRevistas.setSelected(false);
         //regresar el cursor al nombre
-        campoDni.requestFocusInWindow();
+        campoNombre.requestFocusInWindow();
     }
 
     public JPanel getPanelPrincipal() {
@@ -318,3 +319,4 @@ public class CompraPasajes {
     }
 
 }
+
