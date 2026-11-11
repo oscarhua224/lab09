@@ -1,5 +1,3 @@
-package ejemplo04_jcombobox;
-
 import java.awt.FlowLayout;
 import java.awt.event.ItemListener;
 import java.awt.event.ItemEvent;
