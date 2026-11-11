@@ -1,5 +1,3 @@
-package ejemplo01_jbutton;
-
 import java.awt.FlowLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -23,20 +21,19 @@ public class MarcoBoton extends JFrame {
         add(botonJButtonSimple);
 
         // Botón elegante con iconos
-        // Las imágenes deben estar en resources
-        java.net.URL ruta1 = getClass().getResource("/insecto1.gif");
-        java.net.URL ruta2 = getClass().getResource("/insecto2.gif");
+        java.net.URL ruta1 = getClass().getResource("archivo1.gif");
+        java.net.URL ruta2 = getClass().getResource("archivo2.gif");
 
-        Icon insecto1 = ruta1 != null
+        Icon archivo1 = ruta1 != null
                 ? new ImageIcon(ruta1) : null;
-        Icon insecto2 = ruta2 != null
+        Icon archivo2 = ruta2 != null
                 ? new ImageIcon(ruta2) : null;
 
         botonJButtonElegante =
-                new JButton("Botón elegante", insecto1);
+                new JButton("Botón elegante", archivo1);
 
-        if (insecto2 != null) {
-            botonJButtonElegante.setRolloverIcon(insecto2);
+        if (archivo2 != null) {
+            botonJButtonElegante.setRolloverIcon(archivo2);
         }
 
         add(botonJButtonElegante);
