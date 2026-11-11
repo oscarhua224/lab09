@@ -1,5 +1,3 @@
-package ejemplo05_jlist;
-
 import java.awt.FlowLayout;
 import java.awt.Color;
 import javax.swing.*;
